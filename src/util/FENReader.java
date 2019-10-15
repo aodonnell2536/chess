@@ -70,7 +70,7 @@ public class FENReader {
 	
 	private static boolean isValidPiece(char c) {
 		return c == 'r' || c == 'b' || c == 'n' || c == 'k' || c == 'q' || c == 'p' || 
-				c == 'R' || c == 'B' || c == 'N' || c == 'K' || c == 'Q' || c == 'P';
+			   c == 'R' || c == 'B' || c == 'N' || c == 'K' || c == 'Q' || c == 'P';
 	}
 	
 	private static boolean isValidDigit(char c) {

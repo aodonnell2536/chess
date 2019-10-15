@@ -68,6 +68,9 @@ public class BoardGUI extends Pane {
 				
 				if (boardState[i][j] != null) {
 					ImageView sprite = boardState[i][j].getSprite();
+					int x = i * squareWidth,
+						y = (7 - j) * squareHeight;
+					sprite.relocate(x, y);
 					getChildren().add(sprite);
 				}
 				

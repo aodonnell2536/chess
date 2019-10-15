@@ -13,8 +13,8 @@ public class Piece {
 	private static final Image spriteImage = new Image("1920px-Chess_Pieces_Sprite.png");
 	private static final int spriteImageWidth = 320, 
 							 spriteImageHeight = 320;
-	private static int spriteWidth = Chess.WIDTH / 8,
-						spriteHeight = Chess.HEIGHT / 8;
+	private static int spriteWidth = Chess.BOARD_WIDTH / 8,
+						spriteHeight = Chess.BOARD_HEIGHT / 8;
 	
 	
 	private int rank, file;	// y and x respectively, between 1-8
@@ -42,13 +42,12 @@ public class Piece {
 		sprite.setFitWidth(spriteWidth);
 		sprite.setFitHeight(spriteHeight);
 		
-		// reusing x and y for piece placement now 
-		x = (file - 1) * spriteWidth; 
-		y = (8 - rank) * spriteHeight;
-		sprite.relocate(x, y);
-		
 	}
 	
 	public ImageView getSprite() { return this.sprite; }
+	
+	public int getRank() { return this.rank; }
+	
+	public int getFile() { return this.file;  }
 
 }
